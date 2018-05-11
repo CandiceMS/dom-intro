@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+        <title>DOM-Intro Tests</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js" charset="utf-8"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.min.js"></script>
+
+  </head>
+  <body>
+    <div id="mocha"></div>
+   <script>
+       // the mocha test style to use - we use BDD - Behaviour Driven Development
+       mocha.setup('bdd');
+       //ensure the assert function is available
+       var assert = chai.assert;
+   </script>
+   <!-- the function to be tested, followed by the test -->
+   <script src="js/calculate-bill.js" charset="utf-8"></script>
+   <script src="js/tests/calculate-bill.test.js" charset="utf-8"></script>
+
+   <script src="js/text-bill.js" charset="utf-8"></script>
+   <script src="js/tests/text-bill.test.js" charset="utf-8"></script>
+
+   <script src="js/radio-bill.js" charset="utf-8"></script>
+   <script src="js/tests/radio-bill.test.js" charset="utf-8"></script>
+
+   <script src="js/settings-bill.js" charset="utf-8"></script>
+   <script src="js/tests/settings-bill.test.js" charset="utf-8"></script>
+
+
+   <script>
+       <!-- configure and run mocha -->
+       mocha.checkLeaks();
+       mocha.run();
+   </script>
+
+
+  </body>
+</html>
