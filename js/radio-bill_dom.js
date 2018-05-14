@@ -4,23 +4,27 @@
   var totalBoth = document.querySelector('.totalTwo');
 
   var checkedBtn = document.querySelector("input[name='billItemType']:checked");
-  if (checkedBtn) {
-    var billItemType = checkedBtn.value;
-  }
 
   var radioBill = RadioBill();
 
 function radioBillDom() {
 
+  if (checkedBtn) {
+    var billItemType = checkedBtn.value;
+  }
+  
+  radioBill.calculateCallSms(billItemType);
+  radioBill.totalCalculate(billItemType);
+
     callsTwo.innerHTML = radioBill.callsTotal();
     smsTwo.innerHTML = radioBill.smsTotal();
     totalBoth.innerHTML = radioBill.totalReturn();
 
-    if (totalBoth >= 50){
+    if (radioBill.totalReturn() >= 50){
 
         totalBoth.classList.add("danger");
     }
-    else if (totalBoth >= 30){
+    else if (radioBill.totalReturn() >= 30){
         totalBoth.classList.add("warning");
     }
   }
