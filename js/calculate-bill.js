@@ -1,6 +1,8 @@
 function totalPhoneBill(enterText){
-  var usageSplit = enterText.split(",");
+
   var totalBill = 0;
+
+  var usageSplit = enterText.split(",");
   for (var i = 0; i < usageSplit.length; i++){
     if (usageSplit[i].trim() === "call"){
       totalBill += 2.75;
@@ -9,5 +11,5 @@ function totalPhoneBill(enterText){
     totalBill += 0.75;
     }
   }
-  return "R"+totalBill.toFixed(2);
+  return totalBill.toFixed(2);
 }
