@@ -10,9 +10,9 @@
 //      var billItemType = checked_Btn.value
 //}
 
-  console.log(checked_Btn);
-  console.log(checked_Btn[0].value);
-  console.log(checked_Btn[1].value);
+  // console.log(checked_Btn);
+  // console.log(checked_Btn[0].value);
+  // console.log(checked_Btn[1].value);
 
   var radioBill = RadioBill();
 
